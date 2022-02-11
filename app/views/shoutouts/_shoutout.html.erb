@@ -1,0 +1,21 @@
+
+<div class="shoutout-list" id="<%= dom_id shoutout %>">
+  <p class="shoutout-content">
+    <strong>Name:</strong>
+    <%= shoutout.name %>
+  </p>
+
+  <p class="shoutout-content">
+    <strong>Username:</strong>
+    <%= "@" + shoutout.usrname %>
+  </p><br>
+
+  <p class="shoutout-content">
+    <strong>Body:</strong>
+    <%= shoutout.body %>
+  </p><br>
+
+  <%= link_to "Open Shoutout", shoutout %>
+ 
+ 
+</div>

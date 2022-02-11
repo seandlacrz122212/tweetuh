@@ -1,0 +1,34 @@
+<%= form_with(model: shoutout) do |form| %>
+  <% if shoutout.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(shoutout.errors.count, "error") %> prohibited this shoutout from being saved:</h2>
+
+      <ul>
+        <% shoutout.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <section class="form">
+  <div class="form-name">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_area :name, size: "40x2" %>
+  </div><br>
+
+  <div class="form-username">
+    <%= form.label :username, style: "display: block"  %>
+    <%= form.text_area :usrname, size: "40x2" %>
+  </div><br><br>
+ 
+  <div class="form-body">
+    <%= form.label :body, style: "display: block" %><br>
+    <%= form.text_area :body, size: "80x10" %>
+  </div><br><br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  </section>
+<% end %>

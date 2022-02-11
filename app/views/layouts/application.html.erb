@@ -10,6 +10,21 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <header> 
+
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn"></label>
+      <%= link_to 'tweetuh', root_path, class:"logo" %>
+
+      <ul>
+        <li><%= link_to 'home', shoutouts_path, class:"a" %></li>
+        <li><%= link_to 'Create Shoutout', new_shoutout_path, class:"newshoutout" %></li>
+      <ul>
+    </nav>
+
+</header>
+
   <body>
     <%= yield %>
   </body>
